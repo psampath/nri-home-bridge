@@ -37,7 +37,7 @@ const ContactSection = () => {
           </h2>
           <div className="w-20 h-1 bg-nri-gold mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Ready to secure your property? Let's connect—your peace of mind is one click away.
+            Ready to secure or transform your Indian property? Let's connect—your vision is one click away.
           </p>
         </div>
 

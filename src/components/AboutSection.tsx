@@ -25,7 +25,7 @@ const AboutSection = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-nri-blue text-white py-2 px-4 rounded-lg shadow-lg">
-                <p className="text-sm font-semibold">12+ years in the US</p>
+                <p className="text-sm font-semibold">15+ years in the US</p>
               </div>
             </div>
           </div>
@@ -37,13 +37,13 @@ const AboutSection = () => {
                   I've Walked in Your Shoes
                 </h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  I'm Raj Sharma, an Indian who moved to the US at 21 and lived there for 12 years. I know firsthand the pulse of NRIs—the longing to stay connected to India, the worry about aging parents' properties, and the frustration of dealing with unreliable vendors from afar.
+                  I'm Raj Sharma, an Indian who lived in the US for 15 years after moving there at 21. I've lived the NRI life—missing India, stressing over family properties, and dreaming of homes that blend our heritage with modern comfort.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Now back in Hyderabad, I started NRI HomeConnect to solve these pain points. Having experienced both worlds, I understand the unique challenges NRIs face when managing properties remotely. The time differences, language barriers, and finding trustworthy partners shouldn't keep you from protecting your investments.
+                  Now back in India, I started NRI HomeConnect to ease those worries. I know the frustration of unreliable vendors and the challenge of designing from afar. Whether it's managing your property or creating a space that feels like home, I bring an NRI's perspective and an Indian's heart. We're serving Hyderabad now and will soon expand across India.
                 </p>
                 <p className="text-gray-700 leading-relaxed font-semibold">
-                  I treat your property like my own—whether it's finding tenants, handling repairs, or guiding investments. My US experience and Indian roots give me a unique perspective to serve you better.
+                  I treat your property like my own—whether it's finding tenants, handling repairs, designing interiors, or guiding investments. My US experience and Indian roots give me a unique perspective to serve you better.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">

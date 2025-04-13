@@ -14,7 +14,7 @@ const Footer = () => {
               NRI <span className="text-nri-gold">HomeConnect</span>
             </h2>
             <p className="text-gray-300 mb-6">
-              Bridging the US and India, one property at a time. We provide reliable property management and investment services for NRIs.
+              Bridging the US and India, one property and design at a time. We provide reliable property management, interior design, and investment services for NRIs.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-nri-blue transition-colors">
@@ -48,8 +48,8 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-3">
                 <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Property Management</a></li>
+                <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Interior Design</a></li>
                 <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Real Estate Investment</a></li>
-                <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Legal Support</a></li>
                 <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Virtual Updates</a></li>
               </ul>
             </div>

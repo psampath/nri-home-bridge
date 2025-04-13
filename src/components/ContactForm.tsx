@@ -13,6 +13,7 @@ const ContactForm = () => {
     name: "",
     email: "",
     phone: "",
+    serviceType: "property-management",
     location: "hyderabad",
     message: "",
   });
@@ -24,8 +25,8 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSelectChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, location: value }));
+  const handleSelectChange = (value: string, name: string) => {
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -38,13 +39,14 @@ const ContactForm = () => {
       setSubmitted(true);
       toast({
         title: "Message sent!",
-        description: "We'll reach out within 24 hours to discuss your needs!",
+        description: "We'll reach out within 24 hours to bring your plans to life!",
       });
       // Reset form after successful submission
       setFormData({
         name: "",
         email: "",
         phone: "",
+        serviceType: "property-management",
         location: "hyderabad",
         message: "",
       });
@@ -59,7 +61,7 @@ const ContactForm = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-600"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
           <h3 className="text-2xl font-semibold text-green-800 mb-2">Thank You!</h3>
-          <p className="text-green-700 mb-6">We'll reach out within 24 hours to discuss your needs!</p>
+          <p className="text-green-700 mb-6">We'll reach out within 24 hours to bring your plans to life!</p>
           <Button 
             variant="outline" 
             className="bg-white text-green-700 border-green-300 hover:bg-green-50"
@@ -107,22 +109,30 @@ const ContactForm = () => {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="location">Property Location</Label>
-            <Select value={formData.location} onValueChange={handleSelectChange}>
+            <Label htmlFor="serviceType">Service Needed</Label>
+            <Select value={formData.serviceType} onValueChange={(value) => handleSelectChange(value, "serviceType")}>
               <SelectTrigger>
-                <SelectValue placeholder="Select location" />
+                <SelectValue placeholder="Select service" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="hyderabad">Hyderabad</SelectItem>
-                <SelectItem value="secunderabad">Secunderabad</SelectItem>
-                <SelectItem value="miyapur">Miyapur</SelectItem>
-                <SelectItem value="madhapur">Madhapur</SelectItem>
-                <SelectItem value="gachibowli">Gachibowli</SelectItem>
-                <SelectItem value="hi-tech_city">Hi-Tech City</SelectItem>
-                <SelectItem value="kukatpally">Kukatpally</SelectItem>
+                <SelectItem value="property-management">Property Management</SelectItem>
+                <SelectItem value="interior-design">Interior Design</SelectItem>
+                <SelectItem value="both">Both Services</SelectItem>
+                <SelectItem value="investment">Real Estate Investment</SelectItem>
                 <SelectItem value="other">Other</SelectItem>
               </SelectContent>
             </Select>
+          </div>
+          
+          <div className="space-y-2">
+            <Label htmlFor="location">Property Location</Label>
+            <Input
+              id="location"
+              name="location"
+              placeholder="Hyderabad"
+              value={formData.location}
+              onChange={handleChange}
+            />
           </div>
           
           <div className="space-y-2">

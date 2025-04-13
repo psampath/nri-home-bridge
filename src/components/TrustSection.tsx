@@ -2,34 +2,34 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock, Languages, Shield, Map, LucideCreditCard } from "lucide-react";
+import { Clock, Languages, Shield, Map, LucideCreditCard, PaintBucket } from "lucide-react";
 
 const TrustSection = () => {
   const trustFactors = [
     {
       title: "We understand time zone challenges",
-      description: "We work around your schedule, with flexible meeting times and quick response rates.",
+      description: "We work around your schedule, with flexible meeting times and quick response rates, no matter where you are in the US.",
       icon: <Clock className="w-8 h-8 text-nri-blue" />,
     },
     {
       title: "We bridge language and cultural barriers",
-      description: "Our team navigates local dialects and cultural nuances that often confuse overseas investors.",
+      description: "Our team navigates local dialects and cultural nuances that often confuse overseas investors and homeowners.",
       icon: <Languages className="w-8 h-8 text-nri-blue" />,
     },
     {
       title: "We provide complete transparency",
-      description: "Regular video updates, detailed reports, and secure online portals keep you informed.",
+      description: "Regular video updates, 3D design renders, detailed reports, and secure online portals keep you informed and confident.",
       icon: <Shield className="w-8 h-8 text-nri-blue" />,
     },
     {
-      title: "We know Hyderabad's market inside out",
-      description: "Our local expertise helps you make smart investment decisions in this booming tech hub.",
+      title: "We know India's markets inside out",
+      description: "Starting with Hyderabad and expanding soon, our local expertise helps you make smart investment and design decisions.",
       icon: <Map className="w-8 h-8 text-nri-blue" />,
     },
     {
-      title: "We offer secure, US-friendly payments",
-      description: "Seamless transactions through platforms you already trust, with no hidden fees.",
-      icon: <LucideCreditCard className="w-8 h-8 text-nri-blue" />,
+      title: "We blend tradition with modernity",
+      description: "Our designs weave Indian heritage with global functionality, creating spaces that feel like home no matter where you live.",
+      icon: <PaintBucket className="w-8 h-8 text-nri-blue" />,
     },
   ];
 
@@ -47,10 +47,10 @@ const TrustSection = () => {
           <div className="bg-gray-50 p-8 rounded-lg animate-fade-up">
             <h3 className="text-2xl font-semibold text-nri-blue mb-6">We Address Your Pain Points</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              We know the challenges you face: time zone hassles, language barriers, and the fear of being cheated. As someone who's lived in the US, I understand your need for transparency and efficiency. We use secure systems, provide video updates, and work with verified local partners in Hyderabad. Your property is safe with us, no matter where you are.
+              After 15 years in the US, I know the NRI heartbeat: the anxiety of properties left unattended, the fear of designs that don't match your vision, and the hassle of coordinating across time zones. At NRI HomeConnect, we make it simple.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              The emotional connection to your Indian property is something we deeply understand. Whether it's preserving a family home or investing in your roots, we honor that connection with personalized care and regular updates that keep you connected to your investment.
+              We offer video updates for property checks, 3D renders for design plans, and clear pricing with no hidden fees. Our vetted Hyderabad team—builders, designers, realtors—ensures your investment and dreams are safe. Starting in Hyderabad, we're building a trusted network to serve all of India soon.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ const TrustSection = () => {
                   <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" alt="Indian Flag" className="w-6 h-6" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-semibold">Partnered with Hyderabad's top real estate firms</h4>
+                  <h4 className="font-semibold">Partnered with top real estate and design firms</h4>
                 </div>
               </div>
               <div className="flex items-center">
@@ -84,6 +84,14 @@ const TrustSection = () => {
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold">Secure payments via US-friendly platforms</h4>
+                </div>
+              </div>
+              <div className="flex items-center mt-4">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md mr-4">
+                  <PaintBucket className="w-6 h-6 text-nri-gold" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold">We craft homes that weave Indian traditions with global style</h4>
                 </div>
               </div>
             </div>

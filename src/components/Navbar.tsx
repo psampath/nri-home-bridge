@@ -40,10 +40,10 @@ const Navbar = () => {
           : "bg-transparent"
       )}
     >
-      <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
         <a href="#home" className="flex items-center">
           <span className={cn(
-            "text-2xl font-bold font-open-sans",
+            "text-xl md:text-2xl font-bold font-open-sans",
             isScrolled ? "text-nri-blue" : "text-white"
           )}>
             NRI <span className="text-nri-gold">HomeConnect</span>
@@ -84,18 +84,19 @@ const Navbar = () => {
         <button
           className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
         >
           {isMobileMenuOpen ? (
-            <X className={cn(isScrolled ? "text-gray-700" : "text-white")} />
+            <X className={cn(isScrolled ? "text-gray-700" : "text-white")} size={24} />
           ) : (
-            <Menu className={cn(isScrolled ? "text-gray-700" : "text-white")} />
+            <Menu className={cn(isScrolled ? "text-gray-700" : "text-white")} size={24} />
           )}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg w-full absolute top-14 left-0 py-4 px-4 animate-fade-in">
+        <div className="md:hidden bg-white shadow-lg w-full absolute top-full left-0 py-4 px-4 animate-fade-in z-50">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <a
@@ -108,7 +109,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button 
-              className="bg-nri-blue hover:bg-blue-600 text-white w-full"
+              className="bg-nri-blue hover:bg-blue-600 text-white w-full mt-2"
               onClick={() => {
                 setIsMobileMenuOpen(false);
                 const contactSection = document.getElementById("contact");

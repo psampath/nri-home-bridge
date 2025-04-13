@@ -67,7 +67,8 @@ export default {
 					blue: '#1E90FF',
 					gold: '#FFD700',
 					dark: '#333333',
-					light: '#f8f9fa'
+					light: '#f8f9fa',
+					beige: '#F5F5DC'
 				}
 			},
 			fontFamily: {

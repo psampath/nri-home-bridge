@@ -2,28 +2,28 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
-import { Home, TrendingUp, FileText, Video } from "lucide-react";
+import { Home, TrendingUp, FileText, Video, Palette } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Property Management",
-      description: "Regular maintenance, tenant screening, and rent collection. We ensure your property remains in excellent condition.",
+      description: "Regular maintenance, tenant screening, rent collection, and legal documentation. We ensure your property remains in excellent condition.",
       icon: <Home className="w-10 h-10 text-nri-blue" />,
     },
     {
+      title: "Interior Design",
+      description: "Custom renovations, furniture selection, styling, and virtual design consultations that blend Indian heritage with modern comfort.",
+      icon: <Palette className="w-10 h-10 text-nri-blue" />,
+    },
+    {
       title: "Real Estate Investment",
-      description: "Market insights, property scouting, and legal guidance. We help you make informed decisions to grow your wealth.",
+      description: "Market insights, property scouting, and investment guidance. We help you make informed decisions to grow your wealth in India.",
       icon: <TrendingUp className="w-10 h-10 text-nri-blue" />,
     },
     {
-      title: "Legal Support",
-      description: "Documentation, tax compliance, and dispute resolution. We navigate the complex legal landscape so you don't have to.",
-      icon: <FileText className="w-10 h-10 text-nri-blue" />,
-    },
-    {
       title: "Virtual Updates",
-      description: "Video tours and real-time reports for peace of mind. Stay connected to your property no matter where you are.",
+      description: "Video tours, 3D design renders, and real-time reports for peace of mind, no matter where you are in the world.",
       icon: <Video className="w-10 h-10 text-nri-blue" />,
     },
   ];
@@ -37,7 +37,7 @@ const ServicesSection = () => {
           </h2>
           <div className="w-20 h-1 bg-nri-gold mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We specialize in Hyderabad's booming market, ensuring your investments grow while we handle the details.
+            Currently serving Hyderabad's vibrant market, we're your local experts with a global mindset. More cities coming soon!
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const ServicesSection = () => {
 
         <div className="mt-16 bg-nri-blue p-8 rounded-lg shadow-lg text-white text-center">
           <h3 className="text-2xl font-semibold mb-4">Ready to secure your property's future?</h3>
-          <p className="mb-6">Let our expert team in Hyderabad take care of your investment while you focus on what matters.</p>
+          <p className="mb-6">Let our expert team take care of your investment while you focus on what matters, starting in Hyderabad and expanding soon across India.</p>
           <button 
             className="bg-white text-nri-blue hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors"
             onClick={() => {
