@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
@@ -6,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -29,28 +29,50 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
+    try {
+      const response = await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          service_type: formData.serviceType,
+          location: formData.location,
+          message: formData.message,
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+
+      if (response.status === 200) {
+        setSubmitted(true);
+        toast({
+          title: "Message sent!",
+          description: "We'll reach out within 24 hours to bring your plans to life!",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          serviceType: "property-management",
+          location: "hyderabad",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
       toast({
-        title: "Message sent!",
-        description: "We'll reach out within 24 hours to bring your plans to life!",
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
       });
-      // Reset form after successful submission
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        serviceType: "property-management",
-        location: "hyderabad",
-        message: "",
-      });
-    }, 1500);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

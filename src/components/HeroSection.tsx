@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-blend-overlay"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1565967511849-76a60a516170?q=80&w=2071')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2560')", // Modern US cityscape
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
