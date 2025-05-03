@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
-import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -35,22 +34,24 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
+      // Send email using SendGrid API
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
           phone: formData.phone,
-          service_type: formData.serviceType,
+          serviceType: formData.serviceType,
           location: formData.location,
           message: formData.message,
-          to_email: 'info@nrihomeconnect.com', // Set recipient email
-        },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
-      );
+          to: 'info@nrihomeconnect.com',
+        }),
+      });
 
-      if (response.status === 200) {
+      if (response.ok) {
         setSubmitted(true);
         toast({
           title: "Message sent!",
@@ -64,6 +65,8 @@ const ContactForm = () => {
           location: "hyderabad",
           message: "",
         });
+      } else {
+        throw new Error('Failed to send email');
       }
     } catch (error) {
       console.error('Error sending email:', error);
