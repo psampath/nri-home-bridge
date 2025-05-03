@@ -59,7 +59,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <Mail size={16} className="text-nri-gold" />
-                  <span className="text-gray-300">contact@nrihomeconnect.com</span>
+                  <span className="text-gray-300">info@nrihomeconnect.com</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={16} className="text-nri-gold" />

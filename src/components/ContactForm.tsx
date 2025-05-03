@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
@@ -44,6 +45,7 @@ const ContactForm = () => {
           service_type: formData.serviceType,
           location: formData.location,
           message: formData.message,
+          to_email: 'info@nrihomeconnect.com', // Set recipient email
         },
         'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
       );

@@ -19,7 +19,7 @@ const ContactSection = () => {
     {
       icon: <Mail className="w-5 h-5 text-nri-blue" />,
       title: "Email",
-      details: "contact@nrihomeconnect.com",
+      details: "info@nrihomeconnect.com",
     },
     {
       icon: <Clock className="w-5 h-5 text-nri-blue" />,
