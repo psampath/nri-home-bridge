@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-blend-overlay"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2560')", // Modern US cityscape
+          backgroundImage: "url('https://images.unsplash.com/photo-1565967511849-76a60a516170?q=80&w=2071')", // Singapore cityscape
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10 text-center">
         <div className="max-w-3xl mx-auto animate-fade-up">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-open-sans">
-            Your Trusted Partner for Property Management & Interior Design in India
+            Your Trusted Partner for All Property Needs
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 font-open-sans">
             From the US to India, we bridge the gap—managing and designing your properties with care. Starting in Hyderabad, expanding soon.
@@ -66,7 +66,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
             <span className="w-3 h-3 bg-nri-gold rounded-full"></span>
             <p className="text-white text-sm md:text-base">
-              Founded by an NRI with 15 years in the US
+              Founded by individuals who lived in the US for 15 years
             </p>
           </div>
         </div>
