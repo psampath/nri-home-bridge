@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Card } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
@@ -9,22 +8,17 @@ const ContactSection = () => {
     {
       icon: <MapPin className="w-5 h-5 text-nri-blue" />,
       title: "Address",
-      details: "Hitech City, Madhapur, Hyderabad, Telangana 500081",
+      details: "1-1-724/2, Gandhinagar, Hyderabad, Telangana, 500080",
     },
     {
       icon: <Phone className="w-5 h-5 text-nri-blue" />,
       title: "Phone",
-      details: "+91 9876543210",
+      details: "+1 331-684-8428",
     },
     {
       icon: <Mail className="w-5 h-5 text-nri-blue" />,
       title: "Email",
       details: "info@nrihomeconnect.com",
-    },
-    {
-      icon: <Clock className="w-5 h-5 text-nri-blue" />,
-      title: "Office Hours",
-      details: "Mon-Sat: 9AM - 6PM IST (8:30PM - 5:30AM PST)",
     },
   ];
 
