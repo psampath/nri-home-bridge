@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,40 +35,41 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Send email using SendGrid API
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          serviceType: formData.serviceType,
+      // Format service type for readability
+      const formattedServiceType = formData.serviceType
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_q83o74i', // Your service ID
+        'template_wdvkmjg', // Your template ID
+        {
+          to_email: 'info@nrihomeconnect.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone || 'Not provided',
+          service_type: formattedServiceType,
           location: formData.location,
           message: formData.message,
-          to: 'info@nrihomeconnect.com',
-        }),
-      });
+        },
+        'dCwD-z4E1Z7asqeqj' // Your public key
+      );
 
-      if (response.ok) {
-        setSubmitted(true);
-        toast({
-          title: "Message sent!",
-          description: "We'll reach out within 24 hours to bring your plans to life!",
-        });
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          serviceType: "property-management",
-          location: "hyderabad",
-          message: "",
-        });
-      } else {
-        throw new Error('Failed to send email');
-      }
+      setSubmitted(true);
+      toast({
+        title: "Message sent!",
+        description: "We'll reach out within 24 hours to bring your plans to life!",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        serviceType: "property-management",
+        location: "hyderabad",
+        message: "",
+      });
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
