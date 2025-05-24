@@ -6,11 +6,11 @@ import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   const contactInfo = [
-    {
-      icon: <MapPin className="w-5 h-5 text-nri-blue" />,
-      title: "Address",
-      details: "1-1-724/2, Gandhinagar, Hyderabad, Telangana, 500080",
-    },
+    // {
+    //   icon: <MapPin className="w-5 h-5 text-nri-blue" />,
+    //   title: "Address",
+    //   details: "1-1-724/2, Gandhinagar, Hyderabad, Telangana, 500080",
+    // },
     {
       icon: <Phone className="w-5 h-5 text-nri-blue" />,
       title: "Phone",
