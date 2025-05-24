@@ -47,7 +47,7 @@ const TrustSection = () => {
           <div className="bg-gray-50 p-8 rounded-lg animate-fade-up">
             <h3 className="text-2xl font-semibold text-nri-blue mb-6">We Address Your Pain Points</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              After 15 years in the US, I know the NRI heartbeat: the anxiety of properties left unattended, the fear of designs that don't match your vision, and the hassle of coordinating across time zones. At NRI HomeConnect, we make it simple.
+              With 15+ years in the US, we know the NRI heartbeat: the anxiety of properties left unattended, the fear of designs that don't match your vision, and the hassle of coordinating across time zones. At NRI HomeConnect, we make it simple.
             </p>
             <p className="text-gray-700 leading-relaxed">
               We offer video updates for property checks, 3D renders for design plans, and clear pricing with no hidden fees. Our vetted Hyderabad team—builders, designers, realtors—ensures your investment and dreams are safe. Starting in Hyderabad, we're building a trusted network to serve all of India soon.
@@ -57,11 +57,11 @@ const TrustSection = () => {
           <div className="bg-gray-50 p-8 rounded-lg animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <div className="flex gap-8 mb-8">
               <div className="flex-1 bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-3xl font-bold text-nri-blue">100+</h3>
+                <h3 className="text-3xl font-bold text-nri-blue">50+</h3>
                 <p className="text-gray-600">NRIs Served</p>
               </div>
               <div className="flex-1 bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-3xl font-bold text-nri-blue">5+</h3>
+                <h3 className="text-3xl font-bold text-nri-blue">3+</h3>
                 <p className="text-gray-600">Years in Business</p>
               </div>
               <div className="flex-1 bg-white p-6 rounded-lg shadow-md text-center">

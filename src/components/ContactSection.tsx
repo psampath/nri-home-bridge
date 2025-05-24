@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { MapPin, Phone, Mail } from "lucide-react";
@@ -62,24 +63,6 @@ const ContactSection = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">
-                Our Location
-              </h3>
-              <div className="rounded-lg overflow-hidden h-64 shadow-lg">
-                <iframe
-                  title="Office Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.292489522264!2d78.37693027492125!3d17.44938198381702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e8faec9d7f%3A0xaa5843440aac9c86!2sHitech%20City%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1686639783583!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
               </div>
             </div>
           </div>
