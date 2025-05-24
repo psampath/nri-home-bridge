@@ -22,7 +22,7 @@ const AboutSection = () => {
                   We Have Walked in Your Shoes
                 </h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  We're a team of Indians who lived in the US for 15 years after moving there at 21. We've lived the NRI life—missing India, stressing over family properties, and dreaming of homes that blend our heritage with modern comfort.
+                  We're a team of Indians who lived in the US for 15 years. We've lived the NRI life—missing India, stressing over family properties, and dreaming of homes that blend our heritage with modern comfort.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Now back in India, we started NRI HomeConnect to ease those worries. We know the frustration of unreliable vendors and the challenge of designing from afar. Whether it's managing your property or creating a space that feels like home, we bring an NRI's perspective and an Indian's heart. We're serving Hyderabad now and will soon expand across India.
